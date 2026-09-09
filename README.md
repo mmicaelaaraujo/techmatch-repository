@@ -1,12 +1,12 @@
-# TechMatch
+# 💻 TechMatch 
 
 > Uma plataforma inteligente que conecta estudantes da área de tecnologia das Fatecs a oportunidades de estágio.
 
-## Sobre o Projeto:
+## 🔎 Sobre o Projeto:
 
 O **TechMatch** é um sistema desenvolvido como Projeto Integrador (PI) do curso de **Análise e Desenvolvimento de Sistemas** da Fatec Ferraz de Vasconcelos.
 
-## O Problema e a Solução:
+## ☝ O Problema e a Solução:
 
 Muitos estudantes do ensino superior enfrentam dificuldades para ingressar no mercado de trabalho, devido a:
 
@@ -17,14 +17,14 @@ Com isso, o objetivo da plataforma é auxiliar os estudantes em sua busca por es
 
 ---
 
-## 🚀 Funcionalidades Principais
+## 🚀 Funcionalidades Principais:
 
 * **Perfil Acadêmico:** Cadastro e personalização do perfil com base no curso, semestre atual, currículo, habilidades e competências, certificações e portfólio.
 * **Mapeamento Automático de Vagas:** Coleta e hospedagem de vagas através de uma API de varredura.
 * **Ferramenta de Compatibilidade:** Análise e comparação de informações com foco em exibir a porcentagem de compatibilidade do perfil do usuário com as vagas disponíveis.
 * **Recomendação de Melhorias:** Identificação de habilidades faltantes no currículo do aluno, com base na análise prévia, para que o estudante possa aprimorar suas competências.
 
-## Tecnologias e Ferramentas
+## 🛠 Tecnologias e Ferramentas: 
 
 ### Atuais (Sprint 2):
 
@@ -36,7 +36,7 @@ Com isso, o objetivo da plataforma é auxiliar os estudantes em sua busca por es
 * **Back-End:** Python (API de Varredura)
 * **Banco de Dados:** SQL
 
-## Roadmap do projeto:
+## 💡 Roadmap do projeto:
 
 ### Sprint 1:
 [x] Termo de abertura: nome do projeto, integrantes, organização ou segmento atendido
@@ -63,7 +63,7 @@ Com isso, o objetivo da plataforma é auxiliar os estudantes em sua busca por es
 [ ] Link ou arquivo contendo o código-fonte do projeto
 [ ] Evidências da evolução do projeto para apresentação
 
-## 📂 Estrutura do Repositório
+## 📂 Estrutura do Repositório:
 
 ```text
 techmatch/
@@ -77,13 +77,13 @@ techmatch/
 
 ```
 
-## Equipe de Desenvolvimento
+## 👥 Equipe de Desenvolvimento:
 
 * **Micaela da Silva Araújo** — *Scrum Master*
 * **João Marcus Rodrigues Dellea** — *Desenvolvimento*
 * **Vinícius Paulo Taliatti** — *Desenvolvimento*
 
 
-## 📄 Licença
+## 📄 Licença:
 
 Este projeto está sob a licença **MIT License**.
