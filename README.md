@@ -76,12 +76,23 @@ techmatch/
 └── README.md             # Documentação principal do projeto
 
 ```
+## 📝 Padronização de Commits
+
+Neste projeto, utilizamos o padrão **Conventional Commits** para manter o histórico de alterações organizado e legível.
+
+| Prefixo | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| `feat:` | Nova funcionalidade ou componente | `feat: adiciona formulario de contato` |
+| `fix:` | Correção de erro ou bug | `fix: corrige alinhamento do botao no mobile` |
+| `style:` | Mudanças visuais (CSS, margens, cores) sem alterar a lógica | `style: ajusta cores e margens do card` |
+| `docs:` | Alterações na documentação (como o `README.md`) | `docs: atualiza instrucoes de instalacao` |
+| `refactor:` | Reorganização ou melhoria no código sem alterar visual/lógica | `refactor: reorganiza estrutura de pastas das imagens` |
 
 ## 👥 Equipe de Desenvolvimento:
 
-* **Micaela da Silva Araújo** — *Scrum Master*
-* **João Marcus Rodrigues Dellea** — *Desenvolvimento*
-* **Vinícius Paulo Taliatti** — *Desenvolvimento*
+* **Micaela da Silva Araujo** — *Gerente do Projeto/ Desenvolvedora*
+* **João Marcus Rodrigues Dellea** — *Analista de requisitos/ Desenvolvimento*
+* **Vinícius Paulo Taliatti** — *Analista de qualidade/ Desenvolvimento*
 
 
 ## 📄 Licença:
