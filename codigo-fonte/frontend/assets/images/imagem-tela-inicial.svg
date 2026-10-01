@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 787" width="100%" role="img" aria-label="Pessoa de boné e fone trabalhando no notebook">
+
+  <!-- Tijolinhos -->
+  <g fill="#FFFFFF" opacity="0.92">
+    <rect x="318" y="0" width="52" height="27"/>
+    <rect x="355" y="31" width="52" height="27"/>
+    <rect x="661" y="89" width="52" height="27"/>
+    <rect x="724" y="87" width="52" height="27"/>
+    <rect x="698" y="120" width="52" height="27"/>
+    <rect x="761" y="118" width="52" height="27"/>
+    <rect x="765" y="151" width="52" height="27"/>
+    <rect x="165" y="214" width="52" height="27"/>
+    <rect x="202" y="245" width="52" height="27"/>
+    <rect x="206" y="278" width="52" height="27"/>
+    <rect x="301" y="228" width="52" height="27"/>
+    <rect x="0" y="284" width="52" height="27"/>
+    <rect x="37" y="315" width="52" height="27"/>
+    <rect x="41" y="348" width="52" height="27"/>
+    <rect x="0" y="379" width="52" height="27"/>
+    <rect x="762" y="284" width="52" height="27"/>
+    <rect x="762" y="359" width="52" height="27"/>
+    <rect x="825" y="357" width="52" height="27"/>
+    <rect x="728" y="498" width="52" height="27"/>
+    <rect x="798" y="498" width="52" height="27"/>
+  </g>
+
+  <!-- Pescoço -->
+  <path d="M455 255 L470 335 Q515 355 548 320 L560 250 Z" fill="#FFB8B8"/>
+
+  <!-- Camiseta -->
+  <path d="M210 532 L298 333 Q318 286 356 283 L455 262 L470 335 Q515 355 548 320 L556 270 Q580 254 650 270 Q700 290 704 332 L711 392 Q705 482 668 575 L330 575 L312 540 Q260 512 210 532 Z" fill="#BE1E2D"/>
+  <path d="M620 350 L634 380 L620 395 Z" fill="#9E1722"/>
+
+  <!-- Mãos / braços -->
+  <path d="M212 535 Q262 505 312 538 L322 575 L226 575 Q212 572 212 555 Z" fill="#FFB8B8"/>
+  <path d="M650 548 Q662 552 668 575 L650 575 Z" fill="#FFB8B8"/>
+
+  <!-- Rosto -->
+  <path d="M432 190 Q432 150 500 150 Q575 150 575 205 Q575 275 505 278 Q432 275 432 190 Z" fill="#FFB8B8"/>
+  <path d="M455 262 Q505 285 558 255" fill="none" stroke="#E5A0A0" stroke-width="4"/>
+
+  <!-- Cabelo: uma peça só, contínua, por trás do boné -->
+  <path d="M432 214
+           C426 184 430 160 450 146
+           L560 146
+           C578 162 580 186 576 208
+           C570 196 562 188 556 184
+           L548 192
+           L538 176
+           L524 188
+           L512 170
+           L496 184
+           L484 166
+           C470 176 460 192 452 206
+           C446 212 438 216 432 214 Z" fill="#0A0A14"/>
+
+  <!-- Arco do fone -->
+  <path d="M410 150 Q412 55 505 54 Q596 56 598 150" fill="none" stroke="#C8202B" stroke-width="12" stroke-linecap="round"/>
+  <rect x="408" y="143" width="8" height="40" fill="#C9C9C9"/>
+  <rect x="588" y="143" width="8" height="40" fill="#C9C9C9"/>
+
+  <!-- Boné: cúpula completa -->
+  <path d="M418 162 C416 92 458 62 505 62 C552 62 592 92 590 162 Q505 122 418 162 Z" fill="#C9C9C9"/>
+  <path d="M418 162 Q505 100 590 162 Q505 136 418 162 Z" fill="#B3B3B3"/>
+  <path d="M422 150 Q505 108 586 150" fill="none" stroke="#DADADA" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Conchas do fone -->
+  <ellipse cx="418" cy="195" rx="18" ry="26" fill="#C8202B"/>
+  <ellipse cx="588" cy="195" rx="18" ry="26" fill="#C8202B"/>
+  <rect x="419" y="168" width="11" height="57" rx="5" fill="#0A0A14"/>
+  <rect x="575" y="168" width="11" height="57" rx="5" fill="#0A0A14"/>
+
+  <!-- Notebook -->
+  <rect x="330" y="378" width="322" height="200" rx="30" fill="#0A0A14"/>
+  <rect x="313" y="555" width="356" height="22" rx="11" fill="#0A0A14"/>
+  <circle cx="490" cy="476" r="19" fill="#FFFFFF"/>
+
+  <!-- Mesa -->
+  <rect x="22" y="576" width="878" height="27" fill="#D5D5E2"/>
+  <rect x="74" y="603" width="774" height="14" fill="#BDBDCB"/>
+  <rect x="74" y="617" width="774" height="170" fill="#D5D5E2"/>
+</svg>

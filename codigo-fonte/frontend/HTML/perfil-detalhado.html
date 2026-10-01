@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+    <header>
+      <div class="inicio-cabecalho">
+        <div class="logo-cabecalho">
+      <img src="../assets/images/logo-tech-match.png" alt="logo-techmatch">
+        </div>
+      </div>
+
+      <nav class="menu-cabecalho">
+            <form class="caixa-pesquisa" action="">
+                <input type="search" class="botao-pesquisa">
+                <button type="submit" class="botao-pesquisa">
+                    <img src="../assets/icons/lupa.svg" alt="Ícone Lupa">
+                </button>
+            <a href="tela-pos-carregamento.html">
+                <button type="button" class="botao-principal">Início</button>
+            </a>
+            <a href="vagas-detalhadas.html">
+                <button type="botton" class="botao-principal">Vagas</button>
+            </a>
+            <a href="perfil-detalhado.html">
+                <button type="button" class="botao-perfil">
+                    <img src="../assets/icons/usuario.svg" alt="Ícone Perfil">
+                </button>
+            </a>
+            <button type="button" class="botao-notificacao">
+                <img src="../assets/icons/sino-notificacao.svg">
+            </button>
+</form>
+      </nav>
+  
+    </header>
+
+    <div class="foto-perfil">
+        <img src="../assets/icons/usuario.svg" alt="Avatar neutro" class="foto-perfil" id="foto-preview">
+        <input type="file" id="selecao-arquivo" class="input-foto" accept="image/*">
+  
+        <label for="selecao-arquivo" class="botao-alterar-foto" aria-label="Alterar foto">
+            <img src="../assets/icons/camera.svg" alt="Ícone de Câmera">
+        </label>
+    </div>
+
+    <div class="informacoes">
+        <h1 class="nome-completo"> Nome completo do usuário</h1>
+        <p class="informacoes-perfil">
+            Instituição:
+            Curso:
+            Semestre:
+            <button type="button" class="botao-alteracao">Visualizar Currículo</button>
+            <button type="button" class="botao-alteracao">Alterar Dados</button>
+        </p>
+    </div>
+
+    <div class="habilidades">
+        <h2 class="titulo-informacoes">Habilidades</h2>
+        <button type="button"class="botao-alteracao">Alterar Habilidades</button>
+    </div>
+
+    <div class="certificacoes">
+        <h2 class="titulo-informacoes">Certificações</h2>
+        <button type="button" class="botao-alteracao">Alterar Certificações</button>
+    </div>
+
+    <footer class="rodape">
+    <nav class="links-rodape">
+      <a href="sobre-nos.html" class="texto-rodape">Sobre nós</a>
+      <a href="duvidas-frequentes.html"class="texto-rodape">Dúvidas frequentes</a>
+      <a href="termos-de-uso.html" class="texto-rodape">Termos de uso</a>
+    </nav>
+    <p class="rodape__direitos">© TODOS OS DIREITOS RESERVADOS.</p>
+    <img class="logo-rodape" src="../assets/images/logo-tech-match-2.png" alt="Logo TechMatch">
+    </footer>
+    
+</body>
+</html>

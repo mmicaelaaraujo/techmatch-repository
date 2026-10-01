@@ -1,0 +1,249 @@
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+:root {
+  --vermelho: #DF2935;
+  --vermelho-escuro: #cc2929;
+  --laranja: #E88848;
+  --texto-escuro: #630505;
+  --cinza-claro: #f0f0f0;
+  --cinza-texto: #888888;
+  --branco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--branco);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: var(--branco);
+  border-bottom: 2px solid var(--cinza-claro);
+  position: relative;
+  z-index: 10;
+}
+
+.inicio-cabecalho {
+  display: flex;
+  align-items: center;
+}
+
+.logo-cabecalho img {
+  width: 100%;
+  max-height: 100px; 
+  display: block;
+}
+
+.menu-cabecalho {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 15px;
+  margin-left: 30px;
+}
+
+nav.menu-cabecalho > button.botao-principal {
+  margin-right: auto; 
+}
+
+.botao-principal {
+  padding: 10px 25px;
+  border: 1px solid #dcdcdc;
+  border-radius: 25px;
+  background-color: var(--branco);
+  color: var(--cinza-texto);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+section.banner {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background: linear-gradient(90deg, var(--vermelho) 0%, var(--laranja) 100%);
+ overflow: hidden; 
+}
+
+.banner-inicial {
+  width: 50%;
+  padding: 80px 0 80px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.titulo-banner {
+  font-size: 40px;
+  font-weight: normal;
+  color: var(--branco);
+}
+
+.subtitulo-banner {
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--branco);
+  max-width: 90%;
+}
+
+.hero__botao {
+  padding: 12px 35px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--branco);
+  color: #555555;
+  font-weight: normal;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.secao-funcionamento {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 5%;
+  position: relative;
+  z-index: 1;
+}
+
+.imagem-banner {
+  width: 100%; 
+  max-width: 500px; 
+  height: auto;
+  display: block;
+}
+
+
+.funcionamento-plataforma {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 5%;
+  position: relative;
+  z-index: 1;
+}
+
+
+.funcionamento-plataforma::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3000px;
+  background-color: var(--branco);
+  z-index: -1;
+}
+
+article.personalizacao-icon {
+  width: 23%;
+  background-color: var(--cinza-claro);
+  padding: 30px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+
+article.personalizacao-icon img {
+  width: 100%;
+  max-width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.texto-descritivo {
+  color: var(--texto-escuro);
+  font-size: 15px;
+}
+
+
+.banner-logo-empresas {
+  width: 90%;
+  margin: 0 auto 50px auto;
+  background-color: var(--cinza-claro);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-logo-empresas h2.texto-descritivo {
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.grade-empresas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grade-empresas img {
+  max-height: 40px;
+  object-fit: contain;
+}
+
+
+.rodape {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  background-color: var(--vermelho-escuro);
+  padding: 30px 5%;
+  align-items: center;
+}
+
+.links-rodape {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.texto-rodape {
+  color: var(--branco);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.rodape__direitos {
+  grid-column: 1;
+  grid-row: 2;
+  color: var(--branco);
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.logo-rodape {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  max-height: 30px;
+}
