@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Poppins';
   src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
@@ -74,7 +73,19 @@ nav.menu-cabecalho > button.botao-principal {
 }
 
 
+/* NOVO: grid no main para a imagem do estudante ficar sobre o banner */
+main:not(.acesso) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main > section {
+  grid-column: 1 / -1;
+}
+
+
 section.banner {
+  grid-area: 1 / 1 / 2 / 3;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -117,14 +128,17 @@ section.banner {
   cursor: pointer;
 }
 
+/* ALTERADO: imagem do estudante posicionada na metade direita do banner, colada embaixo */
 .secao-funcionamento {
-  width: 50%;
+  grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
+  align-self: end;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding-right: 5%;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .imagem-banner {
@@ -145,15 +159,6 @@ section.banner {
   z-index: 1;
 }
 
-
-.funcionamento-plataforma::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3000px;
-  background-color: var(--branco);
-  z-index: -1;
-}
 
 article.personalizacao-icon {
   width: 23%;
@@ -202,11 +207,11 @@ article.personalizacao-icon img {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
 }
 
 .grade-empresas img {
-  max-height: 40px;
+  max-height: 50px;
   object-fit: contain;
 }
 
@@ -251,17 +256,38 @@ article.personalizacao-icon img {
 
 .acesso {
     width: 100%;
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 520px;
+    margin: 30px auto 40px;
+    padding: 20px 28px 35px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+}
+
+/* Linha "Dados pessoais" com os corações (só aparece na tela de cadastro) */
+.acesso:has(#nome-completo)::before {
+    content: "Dados pessoais";
+    display: block;
+    padding-left: 66px;
+    margin-bottom: 25px;
+    color: var(--texto-escuro);
+    font-size: 16px;
+    line-height: 28px;
+    background:
+        url(../assets/icons/coracao-preenchido-com-cor.svg) no-repeat 0 center / 28px,
+        url(../assets/icons/coracao-vazado.svg) no-repeat 36px center / 22px;
 }
 
 .criar-conta {
-    color: var(--texto-escuro);
-    font-size: 32px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 35px;
+    width: fit-content;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: left;
+    background: linear-gradient(90deg, var(--laranja) 0%, var(--vermelho) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .acesso form {
@@ -271,21 +297,22 @@ article.personalizacao-icon img {
 .campo {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .campo label {
-    color: var(--texto-escuro);
-    font-size: 15px;
-    margin-bottom: 7px;
+    color: #BE1B24;
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
 .campo input {
     width: 100%;
-    height: 45px;
+    height: 42px;
     padding: 0 15px;
-    border: 1px solid #d6d6d6;
+    border: 1px solid transparent;
     border-radius: 8px;
+    background-color: #d9d9d9;
     outline: none;
     font-size: 14px;
 }
@@ -295,41 +322,43 @@ article.personalizacao-icon img {
 }
 
 .requisitos-senha {
-    margin: 5px 0 25px;
+    margin: 0 0 12px;
 }
 
 .requisitos-senha h5 {
     color: var(--texto-escuro);
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: normal;
+    margin-bottom: 2px;
 }
 
 .requisitos-senha ul {
-    padding-left: 20px;
+    list-style: none;
+    padding-left: 0;
 }
 
 .requisitos-senha li {
-    color: var(--cinza-texto);
-    font-size: 12px;
-    margin-bottom: 3px;
+    color: var(--laranja);
+    font-size: 10px;
+    margin-bottom: 1px;
 }
 
 .termos {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .termos input {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 }
 
 .termos label {
-    color: var(--cinza-texto);
-    font-size: 12px;
+    color: var(--texto-escuro);
+    font-size: 13px;
 }
 
 .termos a {
@@ -338,17 +367,343 @@ article.personalizacao-icon img {
 
 .botao-entrar-cadastrar {
     display: block;
-    width: 100%;
-    height: 45px;
+    width: 65%;
+    height: 38px;
+    margin: 0 auto;
     border: none;
-    border-radius: 25px;
-    background-color: var(--vermelho);
-    color: var(--branco);
-    font-size: 15px;
+    border-radius: 8px;
+    background-color: #BE1B24;
+    color: #F5A55F;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .botao-entrar-cadastrar:hover {
     background-color: var(--vermelho-escuro);
+}
+
+
+/* ================================================= */
+/* ================= PERFIL DETALHADO ============== */
+/* ================================================= */
+
+/* ----- Cabeçalho logado (com barra de pesquisa) ----- */
+
+header:has(.caixa-pesquisa) {
+  background-color: #e6e6e6;
+  border-bottom: none;
+  padding: 3px 2%;
+}
+
+header:has(.caixa-pesquisa) .logo-cabecalho {
+  background-color: var(--branco);
+  border-radius: 10px;
+  padding: 4px 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo-cabecalho img {
+  width: 100%;
+  max-height: 100px; 
+  display: block;
+} 
+
+/* o <form> engloba pesquisa, botões, sino e perfil */
+.caixa-pesquisa {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 20px;
+}
+
+input.botao-pesquisa {
+  width: 375px;
+  max-width: 40%;
+  height: 30px;
+  padding: 0 45px 0 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--branco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  outline: none;
+  font-size: 14px;
+}
+
+/* lupa sobreposta ao lado direito do campo */
+button.botao-pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 30px;
+  margin-left: -62px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+button.botao-pesquisa img {
+  width: 22px;
+  height: 22px;
+}
+
+/* empurra Início / Vagas / sino / perfil para a direita */
+.caixa-pesquisa > a:first-of-type {
+  margin-left: auto;
+}
+
+.caixa-pesquisa .botao-principal {
+  width: 130px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.botao-notificacao,
+.botao-perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+/* ordem do protótipo: sino antes do perfil */
+.botao-notificacao {
+  order: 1;
+  width: 32px;
+  height: 32px;
+  margin-left: 40px;
+}
+
+.botao-notificacao img {
+  width: 16px;
+  height: 16px;
+}
+
+.caixa-pesquisa > a:has(.botao-perfil) {
+  order: 2;
+  margin-left: -10px;
+}
+
+.botao-perfil {
+  width: 40px;
+  height: 40px;
+}
+
+.botao-perfil img {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* ----- Corpo da página: grid que monta o "cartão grande" ----- */
+
+body:has(#foto-preview) {
+  display: grid;
+  grid-template-columns: 2.5% 1fr 2.5%;
+}
+
+body:has(#foto-preview) > header {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+body:has(#foto-preview) > footer {
+  grid-column: 1 / -1;
+  grid-row: 5;
+}
+
+/* moldura externa (atrás de tudo) */
+body:has(#foto-preview)::before {
+  content: "";
+  grid-area: 2 / 2 / 5 / 3;
+  margin: 51px 0 39px;
+  border: 3px solid #e6e6e6;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+/* moldura interna do cartão com foto e dados */
+body:has(#foto-preview)::after {
+  content: "";
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 95px 3.7% 0;
+  border: 3px solid #e6e6e6;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+
+/* ----- Foto de perfil ----- */
+
+div.foto-perfil {
+  grid-area: 2 / 2 / 3 / 3;
+  align-self: start;
+  justify-self: start;
+  position: relative;
+  width: 163px;
+  height: 163px;
+  margin: 107px 0 5px calc(3.7% + 18px);
+}
+
+img.foto-perfil {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  object-fit: cover;
+}
+
+/* avatar padrão (ícone) fica menor dentro do círculo; foto enviada preenche tudo */
+img.foto-perfil[src$="usuario.svg"] {
+  padding: 28px;
+  object-fit: contain;
+}
+
+.input-foto {
+  display: none;
+}
+
+.botao-alterar-foto {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--branco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.botao-alterar-foto img {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* ----- Nome e informações ----- */
+
+.informacoes {
+  grid-area: 2 / 2 / 3 / 3;
+  align-self: start;
+  margin: 112px calc(3.7% + 13px) 0 calc(3.7% + 219px);
+}
+
+.nome-completo {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 38px;
+}
+
+/* caixa das informações; cada item vem de uma quebra de linha do HTML */
+.informacoes-perfil {
+  position: relative;
+  height: 67px;
+  padding: 0 19px;
+  border: 3px solid #e6e6e6;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 13px;
+  line-height: 16px;
+  white-space: pre-line;
+}
+
+/* "Visualizar Currículo": dentro da caixa, canto superior direito */
+.informacoes-perfil .botao-alteracao:first-of-type {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  min-width: 165px;
+  white-space: nowrap;
+}
+
+/* "Alterar Dados": logo abaixo da caixa, à direita */
+.informacoes-perfil .botao-alteracao:last-of-type {
+  position: absolute;
+  top: calc(100% + 11px);
+  right: 12px;
+  min-width: 170px;
+  white-space: nowrap;
+}
+
+
+/* ----- Habilidades e Certificações ----- */
+
+.habilidades,
+.certificacoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 3.7%;
+  margin-right: 3.7%;
+}
+
+.habilidades {
+  grid-area: 3 / 2 / 4 / 3;
+  margin-top: 20px;
+}
+
+.certificacoes {
+  grid-area: 4 / 2 / 5 / 3;
+  margin-top: 25px;
+  margin-bottom: 68px;
+}
+
+.titulo-informacoes {
+  min-width: 205px;
+  padding: 4px 20px;
+  border-radius: 8px;
+  background-color: #BE1B24;
+  color: #FDE7DE;
+  font-size: 17px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* caixa onde ficam as habilidades / certificações */
+.habilidades::after,
+.certificacoes::after {
+  content: "";
+  flex: 0 0 100%;
+  margin-top: 18px;
+  min-height: 73px;
+  border: 3px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.certificacoes::after {
+  margin-top: 24px;
+}
+
+.botao-alteracao {
+  height: 22px;
+  padding: 0 22px;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  background-color: var(--branco);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  color: #555555;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botao-alteracao:hover {
+  background-color: var(--cinza-claro);
 }
