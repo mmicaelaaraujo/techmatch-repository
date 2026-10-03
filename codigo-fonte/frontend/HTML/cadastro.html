@@ -4,43 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+
+    <header>
+      <div class="inicio-cabecalho">
         <div class="logo-cabecalho">
-             <img src="../assets/images/logo-tech-match.png" class="logo-rodape" alt="Logo TechMatch">
+      <img src="../assets/images/logo-tech-match.png" alt="logo-techmatch">
+        </div>
+      </div>
+
+      <nav class="menu-cabecalho">
+        <a href="index.html">
+        <button class="botao-principal" type="button">Menu</button>
+        </a>
+        <a href="login.html">
+              <button type="button" class="botao-principal">Entrar</button>
+        </a>
+        <a href="cadastro.html">
+            <button type="button" class="botao-principal">Cadastrar</button>
+        </a>
+      </nav>
+  
+  </header>
+
+    <main class="acesso">
+
+    <h1 class="criar-conta">Crie sua conta</h1>
+
+    <form action="#" method="post">
+
+        <div class="campo">
+            <label for="nome-completo">Nome Completo</label>
+            <input type="text" id="nome-completo" name="nome-completo">
         </div>
 
-    <section class="menu-personalizacao">
-            <img src="../assets/icons/coracao-preenchido.svg" class="coracao-preenchido" alt="Coração Preenchido">
-            <img src="../assets/icons/coracao-vazado.svg" class="coracao-vazado" alt="Coração Vazio">
-            <h3 class="titulo-inicial">Dados Pessoais</h3>
+        <div class="campo">
+            <label for="email-institucional">Email Institucional</label>
+            <input type="email" id="email-institucional" name="email-institucional">
+        </div>
 
-            <main class="acesso">
-                <h1 class="criar-conta">Crie sua conta</h1>
+        <div class="campo">
+            <label for="digite-sua-senha">Digite sua senha</label>
+            <input type="password" id="digite-sua-senha" name="digite-sua-senha">
+        </div>
 
-                <form action="#" method="post">
+        <div class="requisitos-senha">
+            <h5>Sua senha deve ter:</h5>
 
-                    <label>Nome Completo</label>
-                        <input type="text" name="nome-completo">
-                    <label>Email Institucional</label>
-                        <input type="email" name="email-institucional">
-                    <label>Digite sua senha</label>
-                        <input type="password" name="digite-sua-senha">
+            <ul>
+                <li>No mínimo 8 caracteres</li>
+                <li>Pelo menos um caractere especial</li>
+                <li>Pelo menos um número</li>
+            </ul>
+        </div>
 
-                    <h5 class="sua-senha-deve-ter">Sua senha deve ter:</h5>
-                        <ul>
-                            <li class="descricao-senha">No mínimo 8 caracteres</li>
-                            <li class="descricao-senha">Pelo menos um caractere especial</li>
-                            <li class="descricao-senha">Pelo menos um número</li>
-                        </ul>
-                    
-                    <input type="checkbox" id="check-termos" disabled>
-                        <label for="check-termos">
-                            Li e aceito os <a href="#" id="abrir-modal">termos de uso</a>.
-                        </label>
-    </section>
+        <div class="termos">
+            <input type="checkbox" id="check-termos" name="check-termos" required>
+
+            <label for="check-termos">
+                Li e aceito os
+                <a href="#" id="abrir-modal">termos de uso</a>.
+            </label>
+        </div>
         
-    <button type="submit" class="botao-entrar-cadastrar">Cadastrar</button>
+        <button type="submit" class="botao-entrar-cadastrar"> Cadastrar </button>
+        
+
+    </form>
+
+</main>
+
+    <footer class="rodape">
+    <nav class="links-rodape">
+      <a href="sobre-nos.html" class="texto-rodape">Sobre nós</a>
+      <a href="duvidas-frequentes.html"class="texto-rodape">Dúvidas frequentes</a>
+      <a href="termos-de-uso.html" class="texto-rodape">Termos de uso</a>
+    </nav>
+    <p class="rodape__direitos">© TODOS OS DIREITOS RESERVADOS.</p>
+    <img class="logo-rodape" src="../assets/images/logo-tech-match-2.png" alt="Logo TechMatch">
+  </footer>
 </body>
 </html>
 
